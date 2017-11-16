@@ -1,0 +1,208 @@
+/* The size  and color for the borders around the viewport */
+/* The Wordpress Admin ban overlaps - so we had to correct it with a margin */
+a {
+  color: inherit; }
+  a:hover {
+    color: inherit;
+    text-decoration: none; }
+  a:visited {
+    color: inherit; }
+
+#secondary {
+  display: none; }
+
+#primary {
+  background-color: #eaeaea; }
+
+/* General Styling */
+body {
+  margin-top: 1.5rem; }
+
+body {
+  font-size: 10px;
+  color: #252525;
+  font-family: 'Montserrat', sans-serif; }
+  body p {
+    font-size: 1.6rem; }
+
+/* Border Styling */
+#top, #bottom, #left, #right {
+  background: white;
+  position: fixed;
+  border-color: #d9d9d9; }
+
+#left, #right {
+  top: 3rem;
+  bottom: 0;
+  width: 10px; }
+
+#left {
+  left: 0;
+  border-right: 2px solid gray;
+  border-color: #d9d9d9; }
+
+#right {
+  right: 0;
+  border-left: 2px solid gray;
+  border-color: #d9d9d9; }
+
+#top, #bottom {
+  left: 0;
+  right: 0;
+  height: 10px; }
+
+#top {
+  top: calc(3rem + 1.2Rem);
+  z-index: 999;
+  border-bottom: 2px solid red;
+  border-color: #d9d9d9; }
+
+#bottom {
+  bottom: 0;
+  background-color: white;
+  border-top: 2px solid gray;
+  border-color: #d9d9d9;
+  z-index: 99; }
+
+.border-overlay-left, .border-overlay-right {
+  background-color: white;
+  width: calc(10px - 2px);
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 9999; }
+
+.border-overlay-right {
+  right: 0; }
+
+#primary.content-area {
+  padding: 10px; }
+
+.bordercover {
+  display: block;
+  position: fixed;
+  background-color: white;
+  height: calc(10px + 10px);
+  z-index: 9;
+  left: 0px;
+  right: 0px;
+  top: 3rem; }
+
+/* Header */
+.site-header {
+  display: block;
+  position: fixed;
+  text-align: center;
+  margin: auto;
+  z-index: 9999;
+  width: auto;
+  top: calc(10px + 0px);
+  left: 0px;
+  right: 0px; }
+
+.site-header .site-branding {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  background: white;
+  border: 2px solid #d9d9d9;
+  border-radius: 5rem;
+  padding: 2rem 3.5rem; }
+  .site-header .site-branding h1 {
+    display: inline;
+    position: relative;
+    float: none;
+    z-index: 901;
+    font-family: 'Pacifico';
+    font-size: 3.3rem;
+    color: #044e54; }
+  .site-header .site-branding p {
+    display: none; }
+
+/* Navigation */
+body .main-navigation {
+  margin-top: 40rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffaa3c;
+  color: white; }
+
+.nav-menu {
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  position: relative;
+  width: 100%; }
+  .nav-menu li {
+    display: inline-block;
+    position: relative;
+    color: white;
+    margin-right: 2.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    float: none; }
+    .nav-menu li a {
+      font-weight: 700;
+      color: white;
+      transition: color .5s linear; }
+      .nav-menu li a:hover {
+        text-decoration: none;
+        color: #044e54; }
+
+/* Articles */
+article.post {
+  background: white;
+  margin-bottom: 0rem;
+  float: left;
+  width: 33.3%;
+  border: 1px solid #eaeaea;
+  transition: all .5s ease; }
+  article.post:hover .article-image img {
+    width: 150%;
+    opacity: .8; }
+
+.article-image {
+  display: block;
+  position: relative;
+  background: #2f2f2f;
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+  transition: all .5s ease; }
+  .article-image img {
+    display: block;
+    position: absolute;
+    top: -999px;
+    bottom: -999px;
+    left: -999px;
+    right: -999px;
+    margin: auto;
+    width: 100%;
+    max-width: 115%;
+    transition: all .5s ease; }
+
+.article-text {
+  padding: 7%; }
+  .article-text h2 {
+    margin-top: 1rem;
+    font-size: 2.6rem;
+    transition: all .2s ease; }
+    .article-text h2:hover {
+      color: #044e54; }
+
+.entry-footer {
+  margin-top: 2rem;
+  font-size: 1.4rem; }
+
+.comments-link {
+  color: #044e54;
+  margin-right: 1rem; }
+  .comments-link:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    background: black;
+    opacity: .5;
+    width: 2px;
+    height: 10px;
+    margin-left: 1rem; }

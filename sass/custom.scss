@@ -1,0 +1,281 @@
+$textcolor:#252525;
+
+
+/* The size  and color for the borders around the viewport */
+$padding: 10px;
+$bordercolor: #d9d9d9;
+
+/* The Wordpress Admin ban overlaps - so we had to correct it with a margin */
+
+$wpproblem: 3rem;
+
+$green: #044e54;
+
+
+a{
+    color:inherit;
+    &:hover{
+        color:inherit;
+        text-decoration: none;
+    }
+    &:visited{
+        color:inherit;
+    }
+}
+
+#secondary{
+    display:none;
+}
+
+#primary {
+    background-color: #eaeaea;
+}
+
+
+/* General Styling */ 
+
+body{
+    margin-top: 1.5rem;
+}
+
+body{
+    font-size: 10px;
+    color: $textcolor;
+    
+    font-family: 'Montserrat', sans-serif;
+    p{
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Border Styling */
+
+#top, #bottom, #left, #right {
+	background:white;
+	position: fixed;
+    border-color: $bordercolor;
+	}
+	#left, #right {
+		top: $wpproblem; bottom: 0;
+		width: $padding;
+		}
+		#left { left: 0;
+        border-right: 2px solid gray;
+            border-color:$bordercolor;
+        }
+		#right { right: 0;
+        border-left: 2px solid gray;
+            border-color:$bordercolor;}
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: $padding;
+		}
+		#top { 
+            top: calc(#{$wpproblem} + 1.2Rem);
+            z-index: 999;
+            border-bottom: 2px solid red;
+            border-color: $bordercolor;
+            
+        }
+		#bottom { bottom: 0; 
+background-color: white;  
+            border-top:2px solid gray;
+            border-color:$bordercolor;
+            z-index: 99;
+}
+
+.border-overlay-left, .border-overlay-right{
+    background-color: white;
+    width:calc(#{$padding} - 2px);
+    height:100%;
+    position: fixed;
+    display:block;
+    z-index: 9999;
+}
+
+.border-overlay-left{
+    
+}
+.border-overlay-right{
+    right:0;
+
+}
+
+#primary.content-area{
+    padding:$padding;
+    
+}
+
+
+.bordercover{
+    display:block;
+    position: fixed;
+    background-color: white;
+    
+    height:calc(#{$padding} + 10px);
+    z-index: 9;
+    left:0px;
+    right:0px;
+    top:$wpproblem;
+    
+}
+
+
+/* Header */
+
+.site-header{
+     display:block;
+    position:fixed;
+    text-align: center;
+    margin:auto;
+    z-index: 9999;
+    width:auto;
+    top:calc(#{$padding} + 0px);
+    left:0px;
+    right:0px;
+   
+    
+}
+
+.site-header .site-branding{
+    text-align: center;
+    display:inline-block;
+    position: relative;
+    background:white;
+    border:2px solid $bordercolor;
+    border-radius: 5rem;
+   padding:2rem 3.5rem;
+    h1{
+        display:inline;
+        position:relative;
+        float:none;
+        z-index: 901;
+        font-family: 'Pacifico';
+        font-size: 3.3rem;
+        color: $green;
+        
+    }
+    p{
+        display:none;
+    }
+}
+
+/* Navigation */
+
+body .main-navigation{
+    margin-top: 40rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffaa3c;
+    color: white;
+}
+    
+
+
+
+.nav-menu{
+    overflow: hidden;
+    
+    text-align: center;
+    
+    display:block;
+    position: relative;
+    width:100%;
+    li{
+        display:inline-block;
+        position: relative;
+        color:white;
+        margin-right: 2.5rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        float:none;
+        
+        a{
+            font-weight: 700;
+            color:white;
+             transition: color .5s linear;
+            &:hover{
+                text-decoration: none;
+                color:$green;
+            }
+        }
+    }
+}
+
+
+/* Articles */
+article.post {
+      background:white;
+        margin-bottom:0rem;
+    float:left;
+    width:33.3%;
+    border: 1px solid #eaeaea;
+    transition: all .5s ease;
+    &:hover{
+        .article-image img{
+            width:150%;
+            opacity: .8;
+        }
+        
+    }
+    
+}
+
+
+
+
+.article-image{
+    display:block;
+    position:relative;
+    background:#2f2f2f;
+    width:100%;
+    height:30rem;
+    overflow: hidden;
+    transition: all .5s ease;
+    img{
+        display:block;
+        position: absolute;
+        top:-999px;
+        bottom:-999px;
+        left:-999px;
+        right:-999px;
+        margin:auto;
+        width:100%;
+        max-width: 115%;
+        transition: all .5s ease;
+    }
+}
+
+.article-text{
+    padding:7%;
+    h2{
+        margin-top: 1rem;
+        font-size: 2.6rem;
+        transition: all .2s ease;
+        &:hover{
+            color:$green;
+        }
+    }
+}
+
+.entry-footer{
+    margin-top:2rem;
+    font-size: 1.4rem;
+}
+
+.comments-link{
+    color:$green;
+    margin-right: 1rem;
+    &:after{
+        content:'';
+        display:inline-block;
+        position:relative;
+        background:black;
+        opacity:.5;
+        width:2px;
+        height:10px;
+        margin-left: 1rem;
+    }
+}
